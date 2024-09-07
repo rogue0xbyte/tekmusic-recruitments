@@ -1,6 +1,4 @@
 from __future__ import print_function
-from fastapi import Depends, HTTPException, status
-from fastapi.security import HTTPBasic, HTTPBasicCredentials
 import secrets
 from googleapiclient.discovery import build 
 from google.oauth2 import service_account
