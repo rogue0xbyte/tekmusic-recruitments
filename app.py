@@ -36,6 +36,9 @@ def index():
 def submit():
     # Print the submitted form data to the console
     submitted_data = request.form.to_dict()
+    for k in submitted_data.keys():
+        if "[]" in k:
+            submitted_data[k] = ", ".join(request.form.getlist(k))
     print('Form submitted:', submitted_data)
 
 
