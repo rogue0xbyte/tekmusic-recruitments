@@ -1,6 +1,4 @@
 flask
-secrets
-base64
 bcrypt
 python-dotenv
 google-api-python-client
