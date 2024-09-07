@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{formname}} | TekMusic Recruitment Form</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <link rel="stylesheet" href="https://intellx.in/static/fonts/stylesheet.css"/>
+    <link rel="icon" href="https://tekmusic.vercel.app/static/image/logo.png"/>
+    <style type="text/css">* {font-family: 'Aeonik'!important}</style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: var(--background-color, #ffffff);
+            color: var(--text-color, #000);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .form-container {
+            width: 100%;
+            max-width: 500px;
+            padding: 40px;
+            text-align: center;
+            background-color: var(--container-background, #fff);
+            border-radius: 12px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .powered-by {
+            font-size: 0.8em;
+            color: #999;
+            margin-top: 20px;
+        }
+
+        .question {
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .question.active {
+            display: block;
+            opacity: 1;
+        }
+
+        .desc {
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-weight: 300;
+            color: #666;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 1em;
+            background: #f9f9f9;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: var(--focus-color, #000);
+            outline: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border-radius: 6px;
+            border: none;
+            background-color: var(--button-background, #000);
+            color: var(--button-text, #fff);
+            font-size: 1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: var(--button-hover-background, #333);
+            transform: translateY(-3px);
+        }
+
+        .theme-switch {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            cursor: pointer;
+        }
+
+        .header-left {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            input, select, button {
+                width: 90%;
+            }
+        }
+
+        /* Dark mode */
+        body.dark-mode {
+            --background-color: #222;
+            --text-color: #fff;
+            --container-background: #333;
+            --button-background: #fff;
+            --button-text: #000;
+            --button-hover-background: #ddd;
+            --focus-color: #bbb;
+        }
+
+
+        .completion-message {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .completion-message button {
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+
+        .completion-message button:hover {
+            background-color: #0056b3;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        /* Animation for fading out */
+        @keyframes fadeOut {
+            from { opacity: 1; }
+            to { opacity: 0; }
+        }
+
+        /* Animation for fading in */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .question.fade-out {
+            animation: fadeOut 0.5s forwards;
+        }
+
+        .question.fade-in {
+            animation: fadeIn 0.5s forwards;
+        }
+
+        @keyframes rotate {
+          0% {
+            transform: rotate(0deg) scale(0.1);
+            filter: hue-rotate(0deg) blur(calc(var(--size) / 5));
+          }
+          100% {
+            transform: rotate(360deg) scale(0.1);
+            filter: hue-rotate(360deg) blur(calc(var(--size) / 5));
+          }
+        }
+
+        .gradient {
+          --size: 750px;
+          --speed: 10s;
+          --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+          width: var(--size);
+          height: var(--size);
+          filter: blur(calc(var(--size) / 5));
+          background-image: linear-gradient(#4377ef, #7befd0);
+          animation: rotate var(--speed) var(--easing) alternate infinite;
+          border-radius: 30% 70% 70% 30%/30% 30% 70% 70%;
+          margin-top: calc(-1 * var(--size) / 2.2);
+          margin-left: calc(-1 * var(--size) / 2.2);
+        }
+
+        @media (min-width: 720px) {
+          .gradient {
+            --size: 500px;
+          }
+        }
+
+        * {
+          transition: all 0.5s ease-out;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <div class="header-left" style="max-width: 50vw;text-align: left;">
+            <div class="gradient" style="position: absolute;z-index: -1;top: 0;left: 0"></div>
+            <h2 style="position: absolute;z-index: 1;color: var(--button-background, #000);top: 5px;left: 0;width: 45vw!important;">TekMusic Recruitments</h2>
+        </div>
+        <div class="theme-switch">
+            <button id="themeSwitchBtn">Switch Theme</button>
+        </div>
+
+        <form id="dynamicForm" action="/submit" method="POST" enctype="multipart/form-data">
+            <div class="keyboard-nav" id="keyboard-nav">Use ← or → keys to navigate</div><br/><br/>
+                    <div class="question active" data-prompt="Hi!">
+                        <h2 class="prompt">Hi!</h2>
+                        <br/>
+                        <p>Remember, this is your one and only submission. You can <b>not</b> edit your submission once submitted!<br/><br/>
+                            Please take your time and carefully answer the questions.<br/><br/>
+                            *you will <b>have to</b> upload an audition clip, or sample work.</p>
+                        <br/><input type="hidden" name="">
+                        <button type="button" class="next-btn">Next</button><br/><hr/>
+                        <button type="button" class="prev-btn">Previous</button>
+                    </div>
+            {% for item in form_structure %}
+                {% if item.type=="hidden" %}
+                    <input type="hidden" name="{{ item.prompt }}" value="{{ item.value }}" id="{{ item.prompt }}">
+                {% else %}
+                    <div class="question" data-prompt="{{ item.prompt }}" data-desc="{{ item.desc }}">
+                        <h2 class="prompt">{{item.prompt}}</h2>
+                        <p class="desc" id="desc-{{ item.prompt }}"></p>
+                        {% if item.type == 'text' %}
+                            <input type="text" name="{{ item.prompt }}" required placeholder="Type your answer..." id="{{ item.prompt }}">
+                        {% elif item.type == 'dropdown' %}
+                            <select name="{{ item.prompt }}" required id="{{ item.prompt | replace(' ','_') }}">
+                                {% for option in item.options %}
+                                <option value="{{ option }}">{{ option }}</option>
+                                {% endfor %}
+                            </select>
+                        {% elif item.type == 'file' %}
+                            <input type="file" name="{{ item.prompt }}" required id="{{ item.prompt | replace(' ','_') }}" accept="audio/*, video/*">
+                        {% endif %}
+                        <button type="button" class="next-btn">Next</button><br/><hr/>
+                        <button type="button" class="prev-btn">Previous</button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+            <br/>
+            <div class="completion-message hidden" id="completionMessage">
+                <p>You're done. If you have any edits, click below, else submit.</p>
+                <br/>
+                <button id="editButton" type="button">Edit</button>
+                <button type="submit" id="submitButton" onclick="document.getElementById('dynamicForm').submit()">Submit</button>
+            </div>
+        </form>
+
+        <div class="powered-by">
+            Applying to TekMusic
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        let currentQuestion = 0;
+        const questions = document.querySelectorAll('.question');
+        const form = document.getElementById('dynamicForm');
+        const completionMessage = document.getElementById('completionMessage');
+        const submitButton = document.getElementById('submitButton');
+
+            // Initialize localStorage
+            const savedAnswers = JSON.parse(localStorage.getItem('formAnswers')) || {};
+
+        function showNextQuestion() {
+            console.log('showingng nxt qn', currentQuestion, questions.length, (currentQuestion < questions.length));
+            loadAnswer();
+            questions[currentQuestion].classList.add('fade-out');
+            setTimeout(() => {
+                questions[currentQuestion].classList.remove('active', 'fade-out');
+                currentQuestion++;
+                if (currentQuestion <= questions.length) {
+                    try{
+                        questions[currentQuestion].classList.add('active', 'fade-in');
+                        playTypedAnimation();
+                    }
+                    catch{
+                        showCompletionMessage();
+                    }
+                } else {
+                    showCompletionMessage();
+                }
+            }, 500); // Match the duration of the fade-out animation
+            saveAnswer();
+        }
+
+        function showPrevQuestion() {
+            loadAnswer();
+            if (currentQuestion > 0) {
+                questions[currentQuestion].classList.add('fade-out');
+                setTimeout(() => {
+                    questions[currentQuestion].classList.remove('active', 'fade-out');
+                    currentQuestion--;
+                    questions[currentQuestion].classList.add('active', 'fade-in');
+                    playTypedAnimation();
+                }, 500); // Match the duration of the fade-out animation
+            }
+            saveAnswer();
+        }
+
+        function showCompletionMessage() {
+            completionMessage.classList.remove('hidden');
+            document.getElementById('keyboard-nav').classList.add('hidden');
+            submitButton.classList.add('hidden');
+        }
+
+        document.querySelectorAll('.next-btn').forEach(button => {
+            button.addEventListener('click', showNextQuestion);
+        });
+
+        document.querySelectorAll('.prev-btn').forEach(button => {
+            button.addEventListener('click', showPrevQuestion);
+        });
+
+        document.getElementById('editButton').addEventListener('click', function () {
+            location.reload();
+        });
+
+        form.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                showNextQuestion();
+            }
+        });
+
+        document.addEventListener('keydown', function (event) {
+            if (event.key === 'ArrowRight') {
+                showNextQuestion();
+            }
+            if (event.key === 'ArrowLeft') {
+                showPrevQuestion();
+            }
+        });
+
+        function saveAnswer() {
+            try{
+                const currentPrompt = questions[currentQuestion].getAttribute('data-prompt');
+                const input = document.getElementById(currentPrompt);
+                if (input) {
+                    savedAnswers[currentPrompt] = input.value || input.files;
+                    localStorage.setItem('formAnswers', JSON.stringify(savedAnswers));
+                }
+            }
+            catch{
+                console.log(0);
+            }
+        }
+
+        function loadAnswer() {
+            try{
+                const currentPrompt = questions[currentQuestion+1].getAttribute('data-prompt');
+                const input = document.getElementById(currentPrompt);
+                console.log(savedAnswers[currentPrompt], currentPrompt);
+                if (input && savedAnswers[currentPrompt]) {
+                    input.value = savedAnswers[currentPrompt];
+                }
+            }
+            catch{
+                console.log(0);
+            }
+        }
+
+        function playTypedAnimation() {
+            const currentQuestionElement = questions[currentQuestion];
+            const currentPrompt = currentQuestionElement.getAttribute('data-prompt');
+            const descriptionText = currentQuestionElement.getAttribute('data-desc');
+            const descElement = document.getElementById(`desc-${currentPrompt}`);
+            
+            descElement.innerHTML = ''; // Clear previous description
+            new Typed(descElement, {
+                strings: [descriptionText],
+                typeSpeed: 50,
+                showCursor: false
+            });
+        }
+
+        const themeSwitchBtn = document.getElementById('themeSwitchBtn');
+        let isDarkMode = false;
+
+        themeSwitchBtn.addEventListener('click', () => {
+            isDarkMode = !isDarkMode;
+            document.body.classList.toggle('dark-mode', isDarkMode);
+        });
+
+    });
+
+    </script>
+</body>
+</html>

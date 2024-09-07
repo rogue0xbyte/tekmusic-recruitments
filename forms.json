@@ -1,0 +1,545 @@
+[
+  {
+    "id": "7",
+    "formname": "Light Music Vocals",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "formname": "Western Vocals",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "formname": "Carnatic Vocals",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "1",
+    "formname": "Beatboxing",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "3",
+    "formname": "Drums",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "4",
+    "formname": "Flute",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "13",
+    "formname": "Violin",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "12",
+    "formname": "Veena",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "6",
+    "formname": "Keyboard and Piano",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "10",
+    "formname": "Sound Mixing",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "text",
+        "prompt": "Experience",
+        "desc": "A few words about your knowledge of mixing (live/recorded) and your experience"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "11",
+    "formname": "Music Production",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "text",
+        "prompt": "Experience",
+        "desc": "A few words about your knowledge of mixing (live/recorded) and your experience"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "15",
+    "formname": "Other Instruments",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "text",
+        "prompt": "Instrument",
+        "desc": "Name the instrument you play"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "16",
+    "formname": "Percussion",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "text",
+        "prompt": "Instrument",
+        "desc": "Name the instrument you play"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "9",
+    "formname": "Rap",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "5",
+    "formname": "Guitar",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "dropdown",
+        "prompt": "Instrument",
+        "desc": "Select Your Instrument",
+        "options": [
+          "Acoustic guitar",
+          "Electric guitar",
+          "Bass"
+        ]
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  },
+  {
+    "id": "18",
+    "formname": "Media",
+    "form_structure": [
+      {
+        "type": "text",
+        "prompt": "Name",
+        "desc": "What's your name?"
+      },
+      {
+        "type": "text",
+        "prompt": "Email",
+        "desc": "What's your email?"
+      },
+      {
+        "type": "text",
+        "prompt": "Roll Number",
+        "desc": "Roll Number (in capitals, eg: 20AB123)"
+      },
+      {
+        "type": "text",
+        "prompt": "Mobile Number",
+        "desc": "Mobile number (Preferably linked to WhatsApp)"
+      },
+      {
+        "type": "dropdown",
+        "prompt": "Media Type",
+        "desc": "Select your area of media expertise",
+        "options": [
+          "Photography",
+          "Poster Design",
+          "Videography and Video Editing",
+          "Content Creation",
+          "Publicity"
+        ]
+      },
+      {
+        "type": "text",
+        "prompt": "Experience",
+        "desc": "A few words about your knowledge and experience in media"
+      },
+      {
+        "type": "file",
+        "prompt": "Audition Clip",
+        "desc": "Upload 1 supported file: audio or video. Max 100 MB."
+      }
+    ]
+  }
+]
