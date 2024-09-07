@@ -4,8 +4,6 @@ from googleapiclient.discovery import build
 from google.oauth2 import service_account
 import base64, json, os
 
-security = HTTPBasic()
-
 
 SCOPES = [
 'https://www.googleapis.com/auth/spreadsheets',
