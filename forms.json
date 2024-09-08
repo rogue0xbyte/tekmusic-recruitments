@@ -280,7 +280,7 @@
   },
   {
     "id": "10",
-    "formname": "Sound Mixing",
+    "formname": "Live Mixing",
     "form_structure": [
       {
         "type": "text",
