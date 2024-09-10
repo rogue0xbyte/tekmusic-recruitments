@@ -534,9 +534,11 @@
             try{
                 const currentPrompt = questions[currentQuestion+1].getAttribute('data-prompt');
                 const input = document.getElementById(currentPrompt);
-                console.log(savedAnswers[currentPrompt], currentPrompt);
-                if (input && savedAnswers[currentPrompt]) {
-                    input.value = savedAnswers[currentPrompt];
+                if (currentPrompt!="Roll Number"){
+                    console.log(savedAnswers[currentPrompt], currentPrompt);
+                    if (input && savedAnswers[currentPrompt]) {
+                        input.value = savedAnswers[currentPrompt];
+                    }
                 }
             }
             catch{
