@@ -392,7 +392,29 @@
                                 {% endfor %}
                             </div>
                         {% elif item.type == 'file' %}
-                            <input type="file" name="{{ item.prompt }}" required id="{{ item.prompt | replace(' ','_') }}" accept="audio/*, video/*" required>
+                            <div style="text-align: center;">
+                                <input type="file" name="{{ item.prompt }}" required id="{{ item.prompt | replace(' ', '_') }}" accept="audio/*, video/*" required onchange="previewFile(event)">
+                                
+                                <div id="playerContainer-{{loop.index}}" style="display: none; margin-top: 20px;">
+                                    <video id="mediaPlayer-{{loop.index}}" controls style="width: 85%; max-width: 100%;"></video>
+                                    <p style="margin-top: 10px;">Here's the submission you uploaded. Not satisfied? Take your time and redo it, or upload another file. You only got one shot!</p>
+                                </div>
+                                <br/><br/>
+                            </div>
+                            <script>
+                                function previewFile(event) {
+                                    const file = event.target.files[0];
+                                    const player = document.getElementById('mediaPlayer-{{loop.index}}');
+                                    const playerContainer = document.getElementById('playerContainer-{{loop.index}}');
+                                    
+                                    if (file) {
+                                        const fileURL = URL.createObjectURL(file);
+                                        player.src = fileURL;
+                                        player.type = file.type;
+                                        playerContainer.style.display = 'block';
+                                    }
+                                }
+                            </script>
                         {% endif %}
                         <button type="button" class="next-btn">Next</button><br/><hr/>
                         <button type="button" class="prev-btn">Previous</button>
@@ -572,6 +594,38 @@
         form.submit();
       }
     }
+    </script>
+
+    <script>
+        // Function to get the query parameter value by name
+        function getQueryParam(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // Function to handle the change event of the Roll Number text field
+        function handleRollNumberChange(event) {
+            const rollNumber = event.target.value;
+            const submId = getQueryParam("id");
+
+            // Check if roll number has 6 or more digits
+            if (rollNumber.length >= 6) {
+                // Send a request to check the roll number
+                fetch(`/checkRoll/${submId}/${rollNumber}`)
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.found) {
+                            // Redirect to the received page if found
+                            window.location.href = `/recieved/${submId}/${rollNumber}`;
+                        }
+                    })
+                    .catch(error => console.error('Error:', error));
+            }
+        }
+
+        // Attach the event listener to the input field
+        document.querySelector('input[name="Roll Number"]').addEventListener('change', handleRollNumberChange);
+
     </script>
 
 </body>
